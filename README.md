@@ -63,7 +63,7 @@ Vegyük példának a regisztrációt:
 * GET/plant/search: virág keresése
 * POST/plant/search: virág keresésési adatok felküldése
 * GET/:id/delete: virág törlése
-* GET/plant/:id: virág adatok
+* GET/plant/:id : virág adatok
 * GET/:id/createReview: új vélemény írása
 * POST/:id/createReview: új vélemény adatainak felküldése
 
@@ -73,7 +73,7 @@ Vegyük példának a regisztrációt:
 * GET/login: bejelentkezés oldal
 * POST/login: bejelentkezés adatainak felküldése
 * GET/logout: kijelentkezés
-* GET/user/:id: saját profil oldal
+* GET/user/:id : saját profil oldal
 * GET/:id/userEdit: saját adatok szerkesztése oldal
 * POST/:id/userEdit: új saját adatok felküldése
 * GET/:id/myList: saját virágok oldal
