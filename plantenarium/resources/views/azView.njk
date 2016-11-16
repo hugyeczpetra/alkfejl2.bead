@@ -1,0 +1,16 @@
+{% extends "layout" %}
+
+{% block content %}
+<h1>Virágok A-Z</h1><br>
+    {% for plant in plants %}
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="panel panel-primary">
+                <li class="list-group-item">
+                <a href="/plant/{{ plant.id }}">
+                    {{ plant.plantName }}
+                </a>
+                </li>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

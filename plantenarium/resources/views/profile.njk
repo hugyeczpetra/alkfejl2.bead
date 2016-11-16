@@ -1,0 +1,30 @@
+{% extends "layout" %}
+
+{% block content %}
+<h2>Saját profilom</h2><br>
+
+<h4>Vezetéknév</h4>
+{% if (user.lastName == "") %}
+    <pre> nincs megadva </pre>
+{% else %}
+    <pre> {{user.lastName}} </pre>
+{% endif %}
+
+<h4>Keresztnév</h4>
+{% if (user.firstName == "") %}
+    <pre> nincs megadva </pre>
+{% else %}
+    <pre> {{user.firstName}} </pre>
+{% endif %}
+
+<h4>Felhasználónév</h4>
+<pre> {{ user.username }} </pre>
+
+<h4>Email cím</h4>
+<pre> {{ user.email }} </pre>
+
+<a href="/{{ user.id }}/userEdit" class="btn btn-default">
+    Szerkeszt
+</a>
+
+{% endblock %}

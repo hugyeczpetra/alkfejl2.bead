@@ -1,0 +1,46 @@
+{% extends "layout" %}
+
+{% block content %}
+<h2>Virág szerkesztése</h2>
+
+<form class="form-horizontal" method="post">
+    {{ csrfField }}
+  <div class="form-group">
+    <label for="plantName" class="col-lg-2 control-label">Virág neve</label>
+    <div class="col-lg-10">
+      <input type="text" class="form-control" id="plantName" name="plantName" value="{{ plant.plantName }}" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="plantNeed" class="col-lg-2 control-label">Igényei</label>
+    <div class="col-lg-10">
+      <textarea class="form-control" rows="3" id="plantNeed" name="plantNeed" value="{{ plant.plantNeed }}" required></textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="plantCategory" class="col-lg-2 control-label">Kategória</label>
+    <div class="col-lg-10">
+      <select class="form-control" id="plantCategory" name="plantCategory" >
+        {% for category in categories %}
+        <option value="{{ category.id }}">{{ category.categoryName }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+
+<div class="form-group" > 
+	<label for="plantPicture" class="col-lg-2 control-label" >Fénykép feltöltése:</label>
+	<input type="file" name="plantPicture" id="plantPicture">
+</div>
+
+  <div class="form-group">
+    <div class="col-lg-10 col-lg-offset-2">
+      <button type="reset" class="btn btn-default" onclick="javascript:history.back()">Mégsem</button>
+      <button type="submit" class="btn btn-primary">Mentés</button>
+    </div>
+  </div>
+</form>
+
+{% endblock %}

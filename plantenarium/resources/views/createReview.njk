@@ -1,0 +1,35 @@
+{% extends "layout" %}
+
+{% block content %}
+<h3>Mondj véleményt a növényről</h3>
+    <form class="form-horizontal" method="post">
+    {{ csrfField }}
+        <div class="form-group">
+            <label for="score" class="col-lg-2 control-label">Hányasra értékeled?</label>
+            <div class="col-lg-10">
+                <select class="form-control" id="score" name="score">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="reviewText" class="col-lg-2 control-label">Vélemény</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="reviewText" name="reviewText"></textarea>
+                <span class="help-block">Írd le pár sorban a véleményedet erről a növényről.</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default" onclick="javascript:history.back()">Mégsem</button>
+                <button type="submit" class="btn btn-primary">Küldés</button>
+            </div>
+      </div>
+    </form>
+{% endblock %}

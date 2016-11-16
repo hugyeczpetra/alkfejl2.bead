@@ -1,0 +1,25 @@
+{% extends "layout" %}
+
+{% block content %}
+<h1>Virágok kategóriák szerint</h1><br>
+  <div>         
+  {% for category in categories %}
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">{{ category.categoryName }}</div>
+        <ul class="list-group">
+        
+        {% for plant in category.topPlants %}
+        <li class="list-group-item">
+           <a href="/plant/{{ plant.id }}">
+            {{ plant.plantName }}
+          </a>
+        </li>
+        {% endfor %}
+        
+        </ul>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+{% endblock %}  

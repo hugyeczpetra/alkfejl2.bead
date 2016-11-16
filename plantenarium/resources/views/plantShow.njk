@@ -1,0 +1,53 @@
+{% extends "layout" %}
+
+{% block content %}
+<h2>{{ plant.plantName }}</h2><br>
+
+{% if (plant.plantPicture != "") %}
+    <img class="plantPicture" src="/pictures/{{ plant.plantPicture }}">
+{% else %}
+    <img class="plantPicture" src="/pictures/nincs.jpg">
+{% endif %}
+
+<h4>Igényei</h4>
+<p>
+{{ plant.plantNeed }}
+</p><br><br>
+
+<h4>Vélemények</h4>
+{% for review in reviews %}
+<div class="panel panel-primary" style="">
+  <div class="panel-heading">      
+        {% for plantReview in review.user %}
+            <h3 class="panel-title">{{ plantReview.username }}</h3>
+        {% endfor %}
+  </div>
+  <div class="panel-body">
+    <p>{{review.reviewText}}</p>
+    <p>Értékelés: <img class="ratingPicture" src="/assets/{{ review.score }}.jpg"></p> 
+  </div>
+</div>
+{% endfor %}
+
+{% if currentUser %}
+    <a href="/{{ plant.id }}/createReview" class="btn btn-success">
+        Vélemény írása ehhez a növényhez
+    </a><br><br>
+{% endif %}
+
+<div class="form-group">
+    <div>
+      <button type="reset" class="btn btn-default" onclick="javascript:history.back()">Vissza</button>
+    </div>
+</div>
+
+{% if (plant.user_id == currentUser.id) %}
+    <a href="/{{ plant.id }}/plantEdit" class="btn btn-primary">
+        Szerkeszt
+    </a>
+    <a href="/{{ plant.id }}/delete" class="btn btn-danger">
+        Töröl
+    </a>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout" %}
+
+{% block content %}
+<h1>Keresés eredménye</h1><br>
+  {% for plant in plants %}
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="panel panel-primary">
+                <li class="list-group-item">
+                <a href="/plant/{{ plant.id }}">
+                    {{ plant.plantName }}
+                </a>
+                </li>
+            </div>
+        </div>
+    {% endfor %}
+
+<div class="form-group">
+    <div>
+    <button type="reset" class="btn btn-default" onclick="javascript:history.back()">Vissza</button>
+    </div>
+</div>
+{% endblock %}  
