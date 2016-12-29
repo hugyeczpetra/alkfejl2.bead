@@ -29,3 +29,8 @@ Route.post('/:id/userEdit', 'UserController.doEditProfile')
 Route.get('/:id/myList', 'PlantController.myPlants')
 
 Route.get('/*', 'PlantController.index')
+
+Route.group('ajax', function () {
+  Route.delete('/:id/delete', 'PlantController.ajaxDelete')
+  Route.post('/login', 'UserController.ajaxLogin')
+}).prefix('/ajax')

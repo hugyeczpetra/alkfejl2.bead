@@ -130,6 +130,23 @@ class PlantController {
     response.redirect('/')
   }
 
+  * ajaxDelete(request, response) {
+    const id = request.param('id');
+    const plant = yield Plant.find(id);
+    
+
+     if (plant) {
+        if (request.currentUser.id !== plant.user_id) {
+            response.unauthorized('Hoppá! Hiba történt!')
+            return
+        }
+
+        yield plant.delete()          
+        response.ok({ success: true })
+        return 
+      }
+    }
+
 
   * show (request, response) {
     const id = request.param('id');

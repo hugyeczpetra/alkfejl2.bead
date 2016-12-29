@@ -63,7 +63,7 @@ Vegyük példának a regisztrációt:
 * GET/plant/search: virág keresése
 * POST/plant/search: virág keresésési adatok felküldése
 * GET/:id/delete: virág törlése
-* GET/plant/:id : virág adatok
+* GET/plant/:id: virág adatok
 * GET/:id/createReview: új vélemény írása
 * POST/:id/createReview: új vélemény adatainak felküldése
 
@@ -73,7 +73,7 @@ Vegyük példának a regisztrációt:
 * GET/login: bejelentkezés oldal
 * POST/login: bejelentkezés adatainak felküldése
 * GET/logout: kijelentkezés
-* GET/user/:id : saját profil oldal
+* GET/user/:id: saját profil oldal
 * GET/:id/userEdit: saját adatok szerkesztése oldal
 * POST/:id/userEdit: új saját adatok felküldése
 * GET/:id/myList: saját virágok oldal
@@ -121,5 +121,49 @@ Vegyük példának a regisztrációt:
 **Virág leírás**
 ![](docs/vegleges/virag.jpg)
 
-#####Fontos megjegyzés
+####Fontos megjegyzés
 A kép feltöltése csak úgy működik, ha az a kép, amit fel szeretnénk tölteni, a public/picture mappában van
+
+## 3. beadandó kiegészítés
+###Funkciókban érintett fájlok:
+* scripts:
+	- categories.js
+	- delete.js
+	- popup_login.js
+	- short_name.js
+* controllers:
+	-UserController
+	-PlantColrtoller
+* routes.js
+* resources
+
+
+###Funkciók folyamatának leírása
+* categories.js:
+	- a kategória nézetnél (categoryView) megjelennek a kategóriák nevei külön felsorolva
+* delete.js: 
+	- bármely növény törlésekor felugrik egy új ki ablak, megerősítést kér, hogy biztosan törölni 	szeretnénk-e az adott növényt
+	- ha igen, akkor a PlantController ajaxDelete metódusa megkapja az adatokat (ajax/id/delete-	n keresztül) és törli az adott id-jű növényt
+	- ezután visszatérünk a főoldalra
+* popup_login.js:
+	- a Bejelentkezés gombra kattintva felugrik egy új kis ablak, ahol az adatok beírásával 	tudunk bejelentkezni
+	- a UserController-beli ajaxLogin metódus megkapja a beírt adatokat (ajax/login -on 	keresztül), és leellenőrzi
+	- ha nem helyesek, akkor hibát kapunk
+	- ha jók az adatok, akkor megtörténik a bejelentkezés
+* short_name.js:
+	- A-Z nézetben és a főoldalon külön kék kerettel vannak jelezve a 15 betűnél növidebb nevű 	virágok
+* resources fájlokban:
+	- azokon az oldalakon, ahol kötelezően szöveget kell beírni (Virág szerkesztése, 	Regisztráció, Saját adatok szerkesztése, Új virág felvétele) bootstrap-validator ellenőrzi, 	hogy megvannak-e adva a kötelező mezők
+
+ ###Tesztek
+* a tesztekhez Selenium IDE telepítése szükséges
+* tesztek lefuttatása előtt be kell jelentkezni az oldalra
+* ajánlott sorrend:
+	- sajat_profil_szerkesztese
+	- noveny_kereses
+	- velemenyek_irasa
+	- uj_virag_felvetele
+	- noveny_torlese
+
+####Fontos megjegyzés
+Ha kikapcsoljuk a Javascriptet, akkor nem működik az Egyéb lehetőségeknél a lenyíló menü sem. Ezt nem tudtam máshogy megoldani, így volt benne a bootswatch-os sablonban. 

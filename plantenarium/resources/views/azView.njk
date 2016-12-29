@@ -1,5 +1,10 @@
 {% extends "layout" %}
 
+{% block scripts %}
+<script src="/scripts/popup_login.js"></script>
+<script src="/scripts/short_name.js"></script>
+{% endblock %}
+
 {% block content %}
 <h1>Virágok A-Z</h1><br>
     {% for plant in plants %}

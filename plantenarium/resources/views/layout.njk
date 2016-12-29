@@ -26,37 +26,39 @@
   </head>
   <body>
     <div class="hatter"> </div>
-    <nav class="navbar navbar-default">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li><div class="logo"></div></li>
-            <li><a href="/">Főoldal</a></li>
-            <li><a href="/plant/category">Virágok kategóriák szerint</a></li>
-            <li><a href="/plant/az">Virágok A-Z</a></li>
-            <li><a href="/plant/search">Keresés</a></li>
+    <div id="navbar">
+      <nav class="navbar navbar-default">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+              <li><div class="logo"></div></li>
+              <li><a href="/">Főoldal</a></li>
+              <li><a href="/plant/category">Virágok kategóriák szerint</a></li>
+              <li><a href="/plant/az">Virágok A-Z</a></li>
+              <li><a href="/plant/search">Keresés</a></li>
+            </ul>
+          </li>
+          </ul>        
+          <ul class="nav navbar-nav navbar-right">
+              {% if currentUser %}
+                <li class="navbar-text">Üdv, {{ currentUser.username }}!</li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Egyéb lehetőségek <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="/user/{{ currentUser.id }}">Saját profilom</a></li>
+                    <li><a href="/{{ currentUser.id }}/myList">Saját leírásaim</a></li>
+                    <li><a href="/plant/create">Új virág felvétele</a></li>
+                  </ul>
+                </li>
+                <li><a href="/logout">Kilépés</a></li>
+              {% else %}
+                <li><a href="/login" id="btnLogin">Bejelentkezés</a></li>
+                <li><a href="/register">Regisztráció</a></li>
+              {% endif %}
           </ul>
-        </li>
-        </ul>        
-        <ul class="nav navbar-nav navbar-right">
-            {% if currentUser %}
-              <li class="navbar-text">Üdv, {{ currentUser.username }}!</li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Egyéb lehetőségek <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="/user/{{ currentUser.id }}">Saját profilom</a></li>
-                  <li><a href="/{{ currentUser.id }}/myList">Saját leírásaim</a></li>
-                  <li><a href="/plant/create">Új virág felvétele</a></li>
-                </ul>
-              </li>
-              <li><a href="/logout">Kilépés</a></li>
-            {% else %}
-              <li><a href="/login">Bejelentkezés</a></li>
-              <li><a href="/register">Regisztráció</a></li>
-            {% endif %}
-        </ul>
 
-        </div>
-    </nav>
+          </div>
+      </nav>
+      </div>
 
     <div class="container">
         {% block content %}{% endblock %}      
@@ -66,5 +68,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    {% block scripts %}{% endblock %}
   </body>
 </html>
