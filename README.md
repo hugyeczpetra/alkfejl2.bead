@@ -63,7 +63,7 @@ Vegyük példának a regisztrációt:
 * GET/plant/search: virág keresése
 * POST/plant/search: virág keresésési adatok felküldése
 * GET/:id/delete: virág törlése
-* GET/plant/:id: virág adatok
+* GET/plant/:id : virág adatok
 * GET/:id/createReview: új vélemény írása
 * POST/:id/createReview: új vélemény adatainak felküldése
 
@@ -73,7 +73,7 @@ Vegyük példának a regisztrációt:
 * GET/login: bejelentkezés oldal
 * POST/login: bejelentkezés adatainak felküldése
 * GET/logout: kijelentkezés
-* GET/user/:id: saját profil oldal
+* GET/user/:id : saját profil oldal
 * GET/:id/userEdit: saját adatok szerkesztése oldal
 * POST/:id/userEdit: új saját adatok felküldése
 * GET/:id/myList: saját virágok oldal
@@ -132,8 +132,8 @@ A kép feltöltése csak úgy működik, ha az a kép, amit fel szeretnénk töl
 	- popup_login.js
 	- short_name.js
 * controllers:
-	-UserController
-	-PlantColrtoller
+	- UserController
+	- PlantController
 * routes.js
 * resources
 
@@ -153,7 +153,7 @@ A kép feltöltése csak úgy működik, ha az a kép, amit fel szeretnénk töl
 * short_name.js:
 	- A-Z nézetben és a főoldalon külön kék kerettel vannak jelezve a 15 betűnél növidebb nevű 	virágok
 * resources fájlokban:
-	- azokon az oldalakon, ahol kötelezően szöveget kell beírni (Virág szerkesztése, 	Regisztráció, Saját adatok szerkesztése, Új virág felvétele) bootstrap-validator ellenőrzi, 	hogy megvannak-e adva a kötelező mezők
+	- azokon az oldalakon, ahol kötelezően szöveget kell beírni (Virág szerkesztése, Regisztráció, Saját adatok 			szerkesztése, Új virág felvétele) bootstrap-validator ellenőrzi, hogy megvannak-e adva a kötelező mezők
 
  ###Tesztek
 * a tesztekhez Selenium IDE telepítése szükséges
