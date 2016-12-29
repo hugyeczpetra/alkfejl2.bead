@@ -1,169 +1,174 @@
 # Plant-enarium
 
-KÃ©szÃ­tette: Hugyecz Petra
+Készítette: Hugyecz Petra
 
-###KÃ¶vetelmÃ©nyanalÃ­zis
-####CÃ©lkitÅ±zÃ©s
-A cÃ©lom egy olyan oldal lÃ©trehozÃ¡sa, ami az egyes virÃ¡gok gondozÃ¡sÃ¡t, igÃ©nyeit Ã­rja le. VendÃ©gkÃ©nt csak nÃ©zni tudom az egyes leÃ­rÃ¡sokat. LehetÅ‘sÃ©g lesz regisztrÃ¡lni az oldalra. BejelentkezÃ©s utÃ¡n tudok majd sajÃ¡t leÃ­rÃ¡sokat is csinÃ¡lni, Ã©s tudom Ã©rtÃ©kelni az egyes virÃ¡gokat.
+###Követelményanalízis
+####Célkitûzés
+A célom egy olyan oldal létrehozása, ami az egyes virágok gondozását, igényeit írja le. Vendégként csak nézni tudom az egyes leírásokat. Lehetõség lesz regisztrálni az oldalra. Bejelentkezés után tudok majd saját leírásokat is csinálni, és tudom értékelni az egyes virágokat.
 
-#####FunkcionÃ¡lis kÃ¶vetelmÃ©nyek
-######VendÃ©gkÃ©nt:
-* fÅ‘oldalon lÃ¡tni a legÃºjabb virÃ¡gokat
-* a virÃ¡gok kÃ¶zÃ¶tt szabadon bÃ¶ngÃ©szni
-* megnÃ©zni az egyes virÃ¡gok leÃ­rÃ¡sÃ¡t
-* virÃ¡got keresni 
-* regisztrÃ¡lni az oldalra
+#####Funkcionális követelmények
+######Vendégként:
+* fõoldalon látni a legújabb virágokat
+* a virágok között szabadon böngészni
+* megnézni az egyes virágok leírását
+* virágot keresni 
+* regisztrálni az oldalra
 
-#####FelhasznÃ¡lÃ³kÃ©nt:
+#####Felhasználóként:
 * bejelentkezni az oldalra
-* megtekinteni a szemÃ©lyes adataimat
-* mÃ³dosÃ­tani a szemÃ©lyes adataimat
-* virÃ¡got Ã©rtÃ©kelni
-* virÃ¡g leÃ­rÃ¡st hozzÃ¡adni
-* a sajÃ¡t leÃ­rÃ¡saimat tÃ¶rÃ¶lni vagy mÃ³dosÃ­tani
+* megtekinteni a személyes adataimat
+* módosítani a személyes adataimat
+* virágot értékelni
+* virág leírást hozzáadni
+* a saját leírásaimat törölni vagy módosítani
 * kijelentkezni
 
-#####Nem funkcionÃ¡lis kÃ¶vetelmÃ©nyek
-* gyors, biztonsÃ¡gos mÅ±kÃ¶dÃ©s (jelszavak tÃ¡rolÃ¡sa) 
-* kÃ¶nnyÅ± Ã¡ttekintÃ©s (virÃ¡gok ABC sorrendben Ã©s kategÃ³riÃ¡k szerint is)
-* karbantarthatÃ³sÃ¡g
+#####Nem funkcionális követelmények
+* gyors, biztonságos mûködés (jelszavak tárolása) 
+* könnyû áttekintés (virágok ABC sorrendben és kategóriák szerint is)
+* karbantarthatóság
 
-#####SzakterÃ¼leti fogalomjegyzÃ©k
-* **Bonsai:** Lapos tÃ¡lban nevelt fa. mMstersÃ©gesen, mÅ±vÃ©szien alakÃ­tott, formÃ¡ra metszett fa.
-* **RovaremÃ©sztÅ‘ nÃ¶vÃ©nyek:** KÃ¶znapi nevÃ©n hÃºsevÅ‘ nÃ¶vÃ©nyek. Olyan nÃ¶vÃ©nyek, amelyek csupÃ¡n tÃ¡panyagaik egy rÃ©szÃ©t nyerik Ã¡llati hÃºsbÃ³l, s nem az Ã©lethez szÃ¼ksÃ©ges kÃ©miai energiÃ¡t. FÅ‘kÃ©nt rovarokat Ã©s mÃ¡s Ã­zeltlÃ¡bÃºakat ejtenek csapdÃ¡ba. 
-* **Ã‰velÅ‘ nÃ¶vÃ©nyek:** Azokat a lÃ¡gyszÃ¡rÃºakat szoktuk Ã­gy nevezni, amik hosszÃº ideig Ã©lnek Ã©s termÃ©sÃ©rÃ©s utÃ¡n a fÃ¶ld feletti szÃ¡ruk elpusztul, viszont mindig van fÃ¶ldbeli szÃ¡ruk (hagyma, gumÃ³), vagy vastag gyÃ¶kerÃ¼k, ami Ã¡ttelel.
-* **PozsgÃ¡sok:** Olyan nÃ¶vÃ©nyek, amelyek szÃ¡razsÃ¡gtÅ±rÅ‘ek, vagyis nem vÃ­zigÃ©nyesek. Ide tartoznak a kaktuszok Ã©s sok sivatagi nÃ¶vÃ©ny is. 
-* **BalkonnÃ¶vÃ©nyek:** MeghatÃ¡rozott mennyisÃ©gÅ± fÃ¶ldben, Ã¡ltalÃ¡ban erkÃ©lyeken vagy teraszonok tartott egyÃ©ves nÃ¶vÃ©nyek.
+#####Szakterületi fogalomjegyzék
+* **Bonsai:** Lapos tálban nevelt fa. mMsterségesen, mûvészien alakított, formára metszett fa.
+* **Rovaremésztõ növények:** Köznapi nevén húsevõ növények. Olyan növények, amelyek csupán tápanyagaik egy részét nyerik állati húsból, s nem az élethez szükséges kémiai energiát. Fõként rovarokat és más ízeltlábúakat ejtenek csapdába. 
+* **Évelõ növények:** Azokat a lágyszárúakat szoktuk így nevezni, amik hosszú ideig élnek és termésérés után a föld feletti száruk elpusztul, viszont mindig van földbeli száruk (hagyma, gumó), vagy vastag gyökerük, ami áttelel.
+* **Pozsgások:** Olyan növények, amelyek szárazságtûrõek, vagyis nem vízigényesek. Ide tartoznak a kaktuszok és sok sivatagi növény is. 
+* **Balkonnövények:** Meghatározott mennyiségû földben, általában erkélyeken vagy teraszonok tartott egyéves növények.
 
-##HasznÃ¡lati esetek
-####HasznÃ¡latieset-modell
+##Használati esetek
+####Használatieset-modell
 ![](docs/usecase.jpg)
 
-####HasznÃ¡latiesetek rÃ©szletes folyamatai
-VegyÃ¼k pÃ©ldÃ¡nak a regisztrÃ¡ciÃ³t:
-* felhasznÃ¡lÃ³ megÃ©rkezik a fÅ‘oldalra
-* fÅ‘oldalon kivÃ¡lasztja a RegisztrÃ¡ciÃ³ gombot
-* megadja a kÃ©rt adatokat
-* ha azok megfelelnek a szabÃ¡lyoknak, akkor kÃ©sz a regisztrÃ¡ciÃ³, ha nem, akkor az oldal kijelzi a hibÃ¡kat Ã©s Ãºjra kÃ©ri az adatokat
+####Használatiesetek részletes folyamatai
+Vegyük példának a regisztrációt:
+* felhasználó megérkezik a fõoldalra
+* fõoldalon kiválasztja a Regisztráció gombot
+* megadja a kért adatokat
+* ha azok megfelelnek a szabályoknak, akkor kész a regisztráció, ha nem, akkor az oldal kijelzi a hibákat és újra kéri az adatokat
 ![](docs/reg.jpg)
 
-####AdatbÃ¡zisterv
+####Adatbázisterv
 ![](docs/adatbazis.jpg)
 
 
-###VÃ©gpontok
+###Végpontok
 ####PlantController
-* GET/: fÅ‘oldal
-* GET/plant/az: virÃ¡gok A-Z
-* GET/plant/category: virÃ¡gok kategÃ³riÃ¡k szerint
-* GET/plant/create: Ãºj virÃ¡g lÃ©trehozÃ¡sa
-* POST/plant/create: Ãºj virÃ¡g lÃ©trehozÃ¡si adatainak felkÃ¼ldÃ©se
-* GET/:id/plantEdit: virÃ¡g szerkesztÃ©se
-* POST/:id/plantEdit: virÃ¡g szerkesztÃ©si adatainak felkÃ¼ldÃ©se
-* GET/plant/search: virÃ¡g keresÃ©se
-* POST/plant/search: virÃ¡g keresÃ©sÃ©si adatok felkÃ¼ldÃ©se
-* GET/:id/delete: virÃ¡g tÃ¶rlÃ©se
-* GET/plant/:id: virÃ¡g adatok
-* GET/:id/createReview: Ãºj vÃ©lemÃ©ny Ã­rÃ¡sa
-* POST/:id/createReview: Ãºj vÃ©lemÃ©ny adatainak felkÃ¼ldÃ©se
+* GET/: fõoldal
+* GET/plant/az: virágok A-Z
+* GET/plant/category: virágok kategóriák szerint
+* GET/plant/create: új virág létrehozása
+* POST/plant/create: új virág létrehozási adatainak felküldése
+* GET/:id/plantEdit: virág szerkesztése
+* POST/:id/plantEdit: virág szerkesztési adatainak felküldése
+* GET/plant/search: virág keresése
+* POST/plant/search: virág keresésési adatok felküldése
+* GET/:id/delete: virág törlése
+* GET/plant/:id: virág adatok
+* GET/:id/createReview: új vélemény írása
+* POST/:id/createReview: új vélemény adatainak felküldése
 
 ####UserController
-* GET/register: regisztrÃ¡ciÃ³s oldal
-* POST/register: regisztrÃ¡ciÃ³ adatainak felkÃ¼ldÃ©se
-* GET/login: bejelentkezÃ©s oldal
-* POST/login: bejelentkezÃ©s adatainak felkÃ¼ldÃ©se
-* GET/logout: kijelentkezÃ©s
-* GET/user/:id: sajÃ¡t profil oldal
-* GET/:id/userEdit: sajÃ¡t adatok szerkesztÃ©se oldal
-* POST/:id/userEdit: Ãºj sajÃ¡t adatok felkÃ¼ldÃ©se
-* GET/:id/myList: sajÃ¡t virÃ¡gok oldal
+* GET/register: regisztrációs oldal
+* POST/register: regisztráció adatainak felküldése
+* GET/login: bejelentkezés oldal
+* POST/login: bejelentkezés adatainak felküldése
+* GET/logout: kijelentkezés
+* GET/user/:id: saját profil oldal
+* GET/:id/userEdit: saját adatok szerkesztése oldal
+* POST/:id/userEdit: új saját adatok felküldése
+* GET/:id/myList: saját virágok oldal
 
-####EgyÃ©b
-* GET/*: visszairÃ¡nyÃ­tÃ¡s a fÅ‘oldalra
+####Egyéb
+* GET/*: visszairányítás a fõoldalra
 
-####OldalvÃ¡zlatok
+####Oldalvázlatok
 
-**FÅ‘oldal**
+**Fõoldal**
 ![](docs/vazlatok/Fooldal.jpg)
 
-**VirÃ¡gok kategÃ³riÃ¡k szerint**
+**Virágok kategóriák szerint**
 ![](docs/vazlatok/Viragok_kategoriak_szerint.jpg)
 
-**KeresÃ©s**
+**Keresés**
 ![](docs/vazlatok/Kereses.jpg)
 
-**RegisztrÃ¡ciÃ³**
+**Regisztráció**
 ![](docs/vazlatok/Regisztracio.jpg)
 
-**BejelentkezÃ©s**
+**Bejelentkezés**
 ![](docs/vazlatok/Bejelentkezes.jpg)
 
-**SajÃ¡t virÃ¡gaim**
+**Saját virágaim**
 ![](docs/vazlatok/Sajat_viragjaim.jpg)
 
-**VirÃ¡g leÃ­rÃ¡sa**
+**Virág leírása**
 ![](docs/vazlatok/Virag.jpg)
 
-**Ãšj virÃ¡g lÃ©trehozÃ¡sa**
+**Új virág létrehozása**
 ![](docs/vazlatok/Uj_virag_letrehozasa.jpg)
 
-####VÃ©gsÅ‘ megvalÃ³sÃ­tÃ¡s kinÃ©zete
+####Végsõ megvalósítás kinézete
 
-**FÅ‘oldal**
+**Fõoldal**
 ![](docs/vegleges/fooldal.jpg)
 
-**VirÃ¡gok kategÃ³riÃ¡k szerint**
+**Virágok kategóriák szerint**
 ![](docs/vegleges/kategoriak.jpg)
 
-**Ãšj virÃ¡g lÃ©trehozÃ¡sa**
+**Új virág létrehozása**
 ![](docs/vegleges/ujvirag.jpg)
 
-**VirÃ¡g leÃ­rÃ¡s**
+**Virág leírás**
 ![](docs/vegleges/virag.jpg)
 
-####Fontos megjegyzÃ©s
-A kÃ©p feltÃ¶ltÃ©se csak Ãºgy mÅ±kÃ¶dik, ha az a kÃ©p, amit fel szeretnÃ©nk tÃ¶lteni, a public/picture mappÃ¡ban van
+####Fontos megjegyzés
+A kép feltöltése csak úgy mûködik, ha az a kép, amit fel szeretnénk tölteni, a public/picture mappában van
 
-## 3. beadandÃ³ kiegÃ©szÃ­tÃ©s
-###FunkciÃ³kban Ã©rintett fÃ¡jlok:
+## 3. beadandó kiegészítés
+###Funkciókban érintett fájlok:
 * scripts:
 	- categories.js
 	- delete.js
 	- popup_login.js
 	- short_name.js
 * controllers:
-	-UserController
-	-PlantColrtoller
+	- UserController
+	- PlantController
 * routes.js
 * resources
 
 
-###FunkciÃ³k folyamatÃ¡nak leÃ­rÃ¡sa
+###Funkciók folyamatának leírása
 * categories.js:
-	- a kategÃ³ria nÃ©zetnÃ©l (categoryView) megjelennek a kategÃ³riÃ¡k nevei kÃ¼lÃ¶n felsorolva
+	- a kategória nézetnél (categoryView) megjelennek a kategóriák nevei külön felsorolva
 * delete.js: 
-	- bÃ¡rmely nÃ¶vÃ©ny tÃ¶rlÃ©sekor felugrik egy Ãºj ki ablak, megerÅ‘sÃ­tÃ©st kÃ©r, hogy biztosan tÃ¶rÃ¶lni 	szeretnÃ©nk-e az adott nÃ¶vÃ©nyt
-	- ha igen, akkor a PlantController ajaxDelete metÃ³dusa megkapja az adatokat (ajax/id/delete-	n keresztÃ¼l) Ã©s tÃ¶rli az adott id-jÅ± nÃ¶vÃ©nyt
-	- ezutÃ¡n visszatÃ©rÃ¼nk a fÅ‘oldalra
+	- bármely növény törlésekor felugrik egy új ki ablak, megerõsítést kér, hogy biztosan törölni 	szeretnénk-e az adott növényt
+	- ha igen, akkor a PlantController ajaxDelete metódusa megkapja az adatokat (ajax/id/delete-	n keresztül) és törli az adott id-jû növényt
+	- ezután visszatérünk a fõoldalra
 * popup_login.js:
-	- a BejelentkezÃ©s gombra kattintva felugrik egy Ãºj kis ablak, ahol az adatok beÃ­rÃ¡sÃ¡val 	tudunk bejelentkezni
-	- a UserController-beli ajaxLogin metÃ³dus megkapja a beÃ­rt adatokat (ajax/login -on 	keresztÃ¼l), Ã©s leellenÅ‘rzi
-	- ha nem helyesek, akkor hibÃ¡t kapunk
-	- ha jÃ³k az adatok, akkor megtÃ¶rtÃ©nik a bejelentkezÃ©s
+	- a Bejelentkezés gombra kattintva felugrik egy új kis ablak, ahol az adatok beírásával 	tudunk bejelentkezni
+	- a UserController-beli ajaxLogin metódus megkapja a beírt adatokat (ajax/login -on 	keresztül), és leellenõrzi
+	- ha nem helyesek, akkor hibát kapunk
+	- ha jók az adatok, akkor megtörténik a bejelentkezés
 * short_name.js:
-	- A-Z nÃ©zetben Ã©s a fÅ‘oldalon kÃ¼lÃ¶n kÃ©k kerettel vannak jelezve a 15 betÅ±nÃ©l nÃ¶videbb nevÅ± 	virÃ¡gok
-* resources fÃ¡jlokban:
-	- azokon az oldalakon, ahol kÃ¶telezÅ‘en szÃ¶veget kell beÃ­rni (VirÃ¡g szerkesztÃ©se, 	RegisztrÃ¡ciÃ³, SajÃ¡t adatok szerkesztÃ©se, Ãšj virÃ¡g felvÃ©tele) bootstrap-validator ellenÅ‘rzi, 	hogy megvannak-e adva a kÃ¶telezÅ‘ mezÅ‘k
+	- A-Z nézetben és a fõoldalon külön kék kerettel vannak jelezve a 15 betûnél növidebb nevû 	virágok
+* resources fájlokban:
+	- azokon az oldalakon, ahol kötelezõen szöveget kell beírni (Virág szerkesztése, 	Regisztráció, Saját adatok szerkesztése, Új virág felvétele) bootstrap-validator ellenõrzi, 	hogy megvannak-e adva a kötelezõ mezõk
+
+##Szekvenciadiagramm
+Vegyük példána a regisztrációt, bejelentkezést, fõoldalról új virág létrehozását, majd annak törlését
+![](docs/szekvencia.jpg)
+
 
  ###Tesztek
-* a tesztekhez Selenium IDE telepÃ­tÃ©se szÃ¼ksÃ©ges
-* tesztek lefuttatÃ¡sa elÅ‘tt be kell jelentkezni az oldalra
-* ajÃ¡nlott sorrend:
-	- sajat_profil_szerkesztese
+* a tesztekhez Selenium IDE telepítése szükséges
+* tesztek lefuttatása elõtt be kell jelentkezni az oldalra
+* ajánlott sorrend:
+	- sajat_profil_szerkesztese (ez átállítja a jelszót is, új jelszó: 11111)
 	- noveny_kereses
 	- velemenyek_irasa
 	- uj_virag_felvetele
 	- noveny_torlese
 
-####Fontos megjegyzÃ©s
-Ha kikapcsoljuk a Javascriptet, akkor nem mÅ±kÃ¶dik az EgyÃ©b lehetÅ‘sÃ©geknÃ©l a lenyÃ­lÃ³ menÃ¼ sem. Ezt nem tudtam mÃ¡shogy megoldani, Ã­gy volt benne a bootswatch-os sablonban. 
+####Fontos megjegyzés
+Ha kikapcsoljuk a Javascriptet, akkor nem mûködik az Egyéb lehetõségeknél a lenyíló menü sem. Ezt nem tudtam máshogy megoldani, így volt benne a bootswatch-os sablonban. 
